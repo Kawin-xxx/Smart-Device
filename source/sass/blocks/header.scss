@@ -1,0 +1,151 @@
+.header {
+  padding: 20px 0 29px;
+  background: $gradient-header;
+
+  @include vp-1919 {
+    padding: 20px 70px 25px 50px;
+  }
+
+  @include vp-769 {
+    padding: 10px 10px 10px 0;
+  }
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  padding-right: 110px;
+
+  @include vp-1919 {
+    max-width: 650px;
+    padding: 0;
+  }
+}
+
+.header__logo {
+  padding-top: 10px;
+
+  @include vp-1919 {
+    padding-top: 0;
+  }
+
+  @include vp-769 {
+    margin-top: -5px;
+  }
+}
+
+.header__contacts-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  row-gap: 15px;
+  column-gap: 30px;
+  max-width: 480px;
+
+  @include vp-1919 {
+    justify-content: space-between;
+    column-gap: 0;
+    min-width: 100px;
+    max-width: 300px;
+    align-self: baseline;
+  }
+}
+
+.header__contacts-item {
+  min-width: 225px;
+  display: flex;
+  align-items: center;
+
+  @include vp-1919 {
+    justify-content: center;
+    min-width: auto;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*.header__contacts-item:nth-of-type(2n+1) {
+  margin-right: 28px;
+
+  @include vp-1919 {
+    margin-right: 0;
+  }
+}
+
+.header__contacts-item:not(:last-child) {
+
+  @include vp-1919 {
+    margin-right: 20px;
+  }
+}*/
+
+.header__contacts-link {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  color: $color-white;
+  font-family: $font-pt-mono;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 5px;
+
+  &:active {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.header__contacts-link span {
+  align-self: baseline;
+
+  @include vp-1919 {
+    display: none;
+  }
+}
+
+.header__button {
+  color: $color-white;
+  background-color: $color-dark-blue;
+  width: 160px;
+  min-height: 40px;
+  border: 1px solid $color-white;
+  border-radius: 3px;
+  padding: 5px 15px 12px;
+  font-family: $font-roboto-condensed;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  @include vp-1919 {
+    display: none;
+  }
+
+  &:not(:disabled) {
+
+    @include hover-focus {
+      border: 1px solid $color-blue;
+      color: $color-blue;
+    }
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}

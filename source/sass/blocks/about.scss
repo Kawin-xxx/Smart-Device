@@ -1,0 +1,105 @@
+.about {
+  padding: 60px 0 80px;
+  background-color: $color-white-light;
+
+  @include vp-1919 {
+    padding: 45px 0 80px;
+  }
+
+  @include vp-769 {
+    padding: 26px 0 80px;
+  }
+}
+
+.about__container {
+  max-width: 1320px;
+  padding-left: 300px;
+  padding-bottom: 10px;
+  background-image: url("../img/about-year.png");
+  background-repeat: no-repeat;
+  background-position: 52px 2px;
+
+  @include vp-1919 {
+    margin-bottom: 0;
+    padding-left: 226px;
+    background-position: 52px 2px;
+  }
+
+  @include vp-769 {
+    background-image: none;
+  }
+}
+
+.about__text {
+  margin-bottom: 35px;
+
+  @include vp-1919 {
+    margin-bottom: 0;
+  }
+}
+
+.about h2 {
+  font-family: $font-roboto-condensed;
+  color: $color-dark-blue;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include vp-1919 {
+    margin-bottom: 7px;
+  }
+
+  @include vp-769 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.about p {
+  margin: 0;
+  font-family: $font-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-dark-blue;
+  margin-bottom: 20px;
+
+  @include vp-769 {
+    font-size: 14px;
+    line-height: 19px;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.about__button {
+  width: 180px;
+  min-height: 45px;
+  border: 1px solid $color-blue;
+  background-color: $color-white-light;
+  border-radius: 3px;
+  padding: 14px 13px 8px 12px;
+
+  @include vp-769 {
+    width: 160px;
+    min-height: 35px;
+    padding: 8px 15px 12px;
+  }
+}
+
+.about__button span {
+  text-transform: uppercase;
+  color: $color-blue;
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  @include vp-1919 {
+    letter-spacing: 1px;
+  }
+}

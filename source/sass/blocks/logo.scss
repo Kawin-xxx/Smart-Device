@@ -1,0 +1,16 @@
+.logo {
+  max-width: 215px;
+
+  @include vp-769 {
+    width: 35px;
+    height: auto;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
