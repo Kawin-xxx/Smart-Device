@@ -69,21 +69,6 @@
   }
 }
 
-/*.header__contacts-item:nth-of-type(2n+1) {
-  margin-right: 28px;
-
-  @include vp-1919 {
-    margin-right: 0;
-  }
-}
-
-.header__contacts-item:not(:last-child) {
-
-  @include vp-1919 {
-    margin-right: 20px;
-  }
-}*/
-
 .header__contacts-link {
   display: flex;
   align-items: center;
@@ -134,7 +119,6 @@
   }
 
   &:not(:disabled) {
-
     @include hover-focus {
       border: 1px solid $color-blue;
       color: $color-blue;

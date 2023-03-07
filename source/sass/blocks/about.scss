@@ -1,25 +1,32 @@
 .about {
-  padding: 60px 0 80px;
+  padding: 60px 0 100px;
   background-color: $color-white-light;
 
   @include vp-1919 {
-    padding: 45px 0 80px;
+    padding: 36px 0 80px;
   }
 
   @include vp-769 {
-    padding: 26px 0 80px;
+    padding: 26px 0 77px;
   }
 }
 
 .about__container {
   max-width: 1320px;
   padding-left: 300px;
-  padding-bottom: 10px;
-  background-image: url("../img/about-year.png");
+  padding-bottom: 20px;
+  background-image: url("../img/about-year.webp");
   background-repeat: no-repeat;
+  background-size: contain;
+
+  @include retina {
+    background-image: url("../img/about-year@2x.webp");
+  }
+
   background-position: 52px 2px;
 
   @include vp-1919 {
+    background-size: 150px 320px;
     margin-bottom: 0;
     padding-left: 226px;
     background-position: 52px 2px;
@@ -31,7 +38,7 @@
 }
 
 .about__text {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 
   @include vp-1919 {
     margin-bottom: 0;
@@ -45,10 +52,10 @@
   font-weight: 400;
   line-height: 51px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 
   @include vp-1919 {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
   }
 
   @include vp-769 {
@@ -65,7 +72,12 @@
   color: $color-dark-blue;
   margin-bottom: 20px;
 
+  @include vp-1919 {
+    margin-bottom: 18px;
+  }
+
   @include vp-769 {
+    margin-bottom: 17px;
     font-size: 14px;
     line-height: 19px;
 
@@ -81,25 +93,36 @@
   border: 1px solid $color-blue;
   background-color: $color-white-light;
   border-radius: 3px;
-  padding: 14px 13px 8px 12px;
-
-  @include vp-769 {
-    width: 160px;
-    min-height: 35px;
-    padding: 8px 15px 12px;
-  }
-}
-
-.about__button span {
+  padding: 9px 13px 8px 12px;
+  cursor: pointer;
   text-transform: uppercase;
   color: $color-blue;
   font-family: $font-roboto-condensed;
   font-weight: 700;
   line-height: 16px;
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 
   @include vp-1919 {
     letter-spacing: 1px;
+  }
+
+  @include vp-769 {
+    width: 160px;
+    min-height: 35px;
+    padding: 1px 15px 7px;
+    letter-spacing: 0.7px;
+  }
+
+  &:not(:disabled) {
+    @include hover-focus {
+      background-color: $color-blue;
+      border: 1px solid $color-white-light;
+      color: $color-white-light;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 }

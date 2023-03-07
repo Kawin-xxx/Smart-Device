@@ -5,13 +5,13 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
+  background-color: rgba(#041827, 0.8);
 
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -38,7 +38,8 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: 145px 40px;
+    transform: translateX(-8px);
 
     @include vp-769 {
       padding: 60px 16px;
@@ -58,11 +59,11 @@
 
   &__content {
     position: relative;
+    background-color: $color-blue;
+    border-radius: 3px;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
-
-    background-color: $color-default-white;
 
     @include vp-769 {
       width: 100%;
@@ -116,4 +117,12 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__button {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  border: none;
+  background-color: $color-blue;
 }
