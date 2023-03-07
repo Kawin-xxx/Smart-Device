@@ -39,19 +39,19 @@
 // Desktop first
 
 @mixin vp-1919 {
-  @media (max-width: ($desktop-width - 1px)) {
+  @media (max-width: ($desktop-width - 0.1px)) {
     @content;
   }
 }
 
 @mixin vp-769 {
-  @media (max-width: ($tablet-width - 1px)) {
+  @media (max-width: ($tablet-width - 0.1px)) {
     @content;
   }
 }
 
 @mixin vp-319 {
-  @media (max-width: ($mobile-width - 1px)) {
+  @media (max-width: ($mobile-width - 0.1px)) {
     @content;
   }
 }

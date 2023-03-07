@@ -8,6 +8,10 @@
     <title>Smart-Device</title>
     <link rel="stylesheet" href="css/style.min.css">
 
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"> <!-- 16×16 -->
+    <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
+
     <link rel="preload" href="fonts/pt-mono-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto-condensed-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/roboto-condensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -19,8 +23,8 @@
           <div class="header__container container">
             <a class="header__logo logo" href="index.html">
               <picture>
-                <source media="(max-width: 766px)" srcset="img/svg/logo-mobile.svg">
-                <img class="logo__image" src="img/svg/logo.svg" width="215" height="55" alt="Логотип Smart Device.">
+                <source media="(max-width: 767.9px)" srcset="img/svg/logo-mobile.svg">
+                <img class="logo__image" loading="lazy" src="img/svg/logo.svg" width="215" height="55" alt="Логотип Smart Device.">
               </picture>
               <span class="visually-hidden">Интернет-магазин Smart Device.</span>
             </a>
@@ -45,7 +49,7 @@
                 </a>
               </li>
             </ul>
-            <button class="header__button" type="button">Заказать звонок</button>
+            <button class="header__button" type="button" data-open-modal="call">Заказать звонок</button>
           </div>
         </div>
       </header>
@@ -58,12 +62,12 @@
 
             <p>производство и монтаж, поставка комплектующих, <br> блоков и модулей</p>
 
-            <a class="promo__button" href="#">
+            <a class="promo__button" href="#form">
               <span class="">Получить бесплатную консультацию</span>
               <span>Бесплатная консультация</span>
             </a>
-          </section>
-        </div>
+          </div>
+        </section>
 
 
         <section class="advantages">
@@ -71,11 +75,11 @@
             <h2 class="visually-hidden">Преимущества.</h2>
             <ul class="advantages__list">
               <li class="advantages__item">
-                <svg class="social__icon" width="35" height="35" aria-label="Сроки.">
+                <svg width="35" height="35" aria-label="Сроки.">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#advantages-stopwatch"></use>
                 </svg>
 
-                <h3>Оперативные сроки</h2>
+                <h3>Оперативные сроки</h3>
                 <p>
                   Усовершенствованная логистическая система позволяет нам просчитывать стоимость,
                   производить и доставлять заказы плат и комплектующих в самые короткие сроки
@@ -83,7 +87,7 @@
               </li>
 
               <li class="advantages__item">
-                <svg class="social__icon" width="35" height="35" aria-label="Поставщики.">
+                <svg width="35" height="35" aria-label="Поставщики.">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#advantages-hired"></use>
                 </svg>
 
@@ -95,18 +99,18 @@
               </li>
 
               <li class="advantages__item">
-                <svg class="social__icon" width="35" height="35" aria-label="Конфидинцеальность.">
+                <svg width="35" height="35" aria-label="Конфидинцеальность.">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#advantages-detective"></use>
                 </svg>
 
-                <h3>Полная конфиденциальность</h2>
+                <h3>Полная конфиденциальность</h3>
                 <p>
                   По желанию клиента&nbsp;  мы обеспечиваем полную конфиденциальность.
                 </p>
               </li>
 
               <li class="advantages__item">
-                <svg class="social__icon" width="35" height="35" aria-label="Стоимость.">
+                <svg width="35" height="35" aria-label="Стоимость.">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#advantages-tag"></use>
                 </svg>
 
@@ -137,20 +141,101 @@
               </p>
             </div>
 
-            <div class="about__text">
-              <button class="about__button" type="button">
-                <span>Подробнее</span>
-              </button>
+            <div class="about__more close">
               <p class="visually-hidden">
                 Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день.
                 На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.
                 Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
                 Использование инновационных технологий помогает экономить деньги и время наших клиентов
               </p>
+              <button class="about__button" type="button">Подробнее</button>
             </div>
           </div>
         </section>
 
+        <section class="products">
+          <div class="products__container container">
+            <h2>Smart Device предлагает следующие товары и услуги</h2>
+            <h2>Товары и услуги <br> Smart Device</h2>
+
+            <ul class="products__list">
+              <li class="products__item products__item--production">
+                <a href="#" class="products__link">
+                  <h3>Производство <br> печатных плат</h3>
+
+                  <span class="products__button">
+                    <span class="visually-hidden">Перейти к товару.</span>
+                  </span>
+                </a>
+              </li>
+
+              <li class="products__item products__item--installation">
+                <a href="#" class="products__link">
+                  <h3>Монтаж <br> печатных <br> плат</h3>
+
+                  <span class="products__button">
+                    <span class="visually-hidden">Перейти к товару.</span>
+                  </span>
+                </a>
+              </li>
+
+              <li class="products__item products__item--accessories">
+                <a href="#" class="products__link">
+                  <h3>Комплектующие <br> для светотехники</h3>
+
+                  <span class="products__button">
+                    <span class="visually-hidden">Перейти к товару.</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="form" id="form">
+          <div class="form__container container" data-form-validate>
+            <div class="form__image-wrapper">
+              <picture>
+                <img class="form__image" loading="lazy" src="img/form-airplane.webp" srcset="img/form-airplane@2x.webp 2x" width="510" height="285" alt="Бумажный самолет.">
+              </picture>
+            </div>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <h2 class="visually-hidden">Форма обратной связи.</h2>
+              <fieldset>
+                <legend>Остались вопросы? Задайте их нам!</legend>
+                <p>Мы проконсультируем Вас бесплатно</p>
+                <ul class="form__list">
+                  <li class="form__item form__item--name">
+                    <label data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <input type="text" id="name" placeholder="Имя" required>
+                    </label>
+                  </li>
+
+                  <li class="form__item form__item--phone">
+                    <label data-validate-type="phone" ata-on-input-validate data-required data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля">
+                      <input type="tel" id="phone" placeholder="Телефон" required>
+                    </label>
+                  </li>
+
+                  <li class="form__item form__item--question">
+                    <label>
+                      <textarea id="question" placeholder="Ваш вопрос"></textarea>
+                    </label>
+                  </li>
+                </ul>
+
+                <div class="form__button-wrapper">
+                  <button class="form__button" type="submit">Задать вопрос</button>
+                  <label class="form__checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению!">
+                    <input type="checkbox" required checked>
+                    <span class="form__checkbox-mark"></span>
+                    <span class="form__checkbox-remark">Я согласен на обработку персональных данных</span>
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
 
       </main>
 
@@ -160,9 +245,7 @@
             <div class="footer__social social">
               <a class="logo social__logo" href="index.html">
                 <picture>
-                  <source media="(max-width: 769px)" srcset="img/svg/logo.svg">
-                  <source media="(max-width: 1919px)" srcset="img/svg/logo.svg">
-                  <img class="logo__image" src="img/svg/logo.svg" width="215" height="55" alt="Логотип Smart Device.">
+                  <img class="logo__image" loading="lazy" src="img/svg/logo.svg" width="215" height="55" alt="Логотип Smart Device.">
                 </picture>
                 <span class="visually-hidden">Интернет-магазин Smart Device.</span>
               </a>
@@ -194,11 +277,14 @@
               </ul>
             </div>
 
-            <div class="footer__wrapper">
-              <nav class="footer__nav">
-                <button class="footer__button footer__button--closed" type="button">Разделы сайта</button>
+            <div class="footer__wrapper accordion" data-accordion="parent" data-single="data-single" data-destroy="(max-width: 767px)">
+              <nav class="footer__nav" data-accordion="element">
+                <button class="footer__button" type="button" data-accordion="button">
+                  <span>Разделы сайта</span>
+                  <span class="visually-hidden">Развернуть/свернуть список.</span>
+                </button>
 
-                <div class="footer__nav-wrapper">
+                <div class="footer__nav-wrapper" data-accordion="content">
                   <ul class="footer__nav-list">
                     <li class="footer__nav-item">
                       <a href="#">О Компании</a>
@@ -228,9 +314,12 @@
                 </div>
               </nav>
 
-              <div class="footer__contacts">
-                <button class="footer__button footer__button--opened" type="button">Наш офис</button>
-                <ul class="footer__contacts-list">
+              <div class="footer__contacts"  data-accordion="element">
+                <button class="footer__button" type="button" data-accordion="button">
+                  <span>Наш офис</span>
+                  <span class="visually-hidden">Развернуть/свернуть список.</span>
+                </button>
+                <ul class="footer__contacts-list" data-accordion="content">
                   <li class="footer__contacts-item">
                     <address>г. Мытищи, Олимпийский проспект, д.10</address>
                   </li>
@@ -250,7 +339,58 @@
         </div>
 
       </footer>
+    </div>
+    <div class="modal" data-modal="call">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content" data-close-modal>
+          <button class="modal__button" type="button">
+            <svg width="20" height="20" role="img" aria-hidden="true" focusable="false" aria-label="Закрыть окно.">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="form form--modal" data-form-validate>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <h2 class="visually-hidden">Форма обратной связи.</h2>
+              <fieldset>
+                <legend>Закажите звонок</legend>
+                <p>Оставьте контакты, мы проконсультируем <br> вас бесплатно в удобное время</p>
+                <ul class="form__list">
+                  <li class="form__item form__item--name">
+                    <label data-validate-type="text" data-limitation="name"
+                      data-message-base="Поле обязательно к заполнению!"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <input type="text" id="name-popup" placeholder="Имя" required>
+                    </label>
+                  </li>
 
+                  <li class="form__item form__item--phone">
+                    <label data-validate-type="phone" ata-on-input-validate data-required data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля">
+                      <input type="tel" id="phone-popup" placeholder="Телефон" required>
+                    </label>
+                  </li>
+
+                  <li class="form__item form__item--question">
+                    <label>
+                      <textarea id="question-popup" placeholder="Ваш вопрос"></textarea>
+                    </label>
+                  </li>
+                </ul>
+
+                <div class="form__button-wrapper">
+                  <button class="form__button" type="submit">Отправить</button>
+                  <label class="form__checkbox" data-validate-type="checkbox"
+                    data-message-base="Поле обязательно к заполнению!">
+                    <input type="checkbox" required>
+                    <span class="form__checkbox-mark"></span>
+                    <span class="form__checkbox-remark">Я согласен на обработку&nbsp; персональных данных</span>
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="js/vendor.min.js"></script>

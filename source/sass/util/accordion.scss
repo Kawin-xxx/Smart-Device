@@ -1,0 +1,13 @@
+.accordion {
+  @include vp-769 {
+    & .footer__button {
+      background-image: url("../img/svg/plus.svg");
+      background-repeat: no-repeat;
+      background-position: 91.5% center;
+    }
+
+    & .is-active .footer__button {
+      background-image: url("../img/svg/minus.svg");
+    }
+  }
+}
