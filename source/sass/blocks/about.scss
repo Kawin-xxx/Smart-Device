@@ -15,12 +15,12 @@
   max-width: 1320px;
   padding-left: 300px;
   padding-bottom: 20px;
-  background-image: url("../img/about-year.webp");
+  background-image: url("../img/about-year.png");
   background-repeat: no-repeat;
   background-size: contain;
 
   @include retina {
-    background-image: url("../img/about-year@2x.webp");
+    background-image: url("../img/about-year@2x.png");
   }
 
   background-position: 52px 2px;
@@ -29,7 +29,7 @@
     background-size: 150px 320px;
     margin-bottom: 0;
     padding-left: 226px;
-    background-position: 52px 2px;
+    background-position: 45px 0;
   }
 
   @include vp-769 {

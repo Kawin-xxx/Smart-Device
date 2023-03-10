@@ -73,10 +73,10 @@
 .products__item {
   min-height: 650px;
   background-color: $color-dark-blue;
-  background-image: url("../img/promo-background.webp");
+  background-image: url("../img/promo-background.jpg");
 
   @include retina {
-    background-image: url("../img/promo-background@2x.webp");
+    background-image: url("../img/promo-background@2x.jpg");
   }
 
   background-repeat: no-repeat;
