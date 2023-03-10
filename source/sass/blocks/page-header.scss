@@ -1,17 +1,20 @@
-.header {
-  padding: 20px 0 29px;
+.page-header {
+  padding: 20px 0 38px;
   background: $gradient-header;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 
   @include vp-1919 {
-    padding: 20px 70px 25px 50px;
+    padding: 20px 70px 32px 50px;
   }
 
   @include vp-769 {
-    padding: 10px 10px 10px 0;
+    padding: 10px 10px 26px 0;
   }
 }
 
-.header__container {
+.page-header__container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -25,7 +28,7 @@
   }
 }
 
-.header__logo {
+.page-header__logo {
   padding-top: 10px;
 
   @include vp-1919 {
@@ -37,7 +40,7 @@
   }
 }
 
-.header__contacts-list {
+.page-header__contacts-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -56,7 +59,7 @@
   }
 }
 
-.header__contacts-item {
+.page-header__contacts-item {
   min-width: 225px;
   display: flex;
   align-items: center;
@@ -69,7 +72,7 @@
   }
 }
 
-.header__contacts-link {
+.page-header__contacts-link {
   display: flex;
   align-items: center;
   column-gap: 16px;
@@ -90,7 +93,7 @@
   }
 }
 
-.header__contacts-link span {
+.page-header__contacts-link span {
   align-self: baseline;
 
   @include vp-1919 {
@@ -98,14 +101,14 @@
   }
 }
 
-.header__button {
+.page-header__button {
   color: $color-white;
   background-color: $color-dark-blue;
   width: 160px;
   min-height: 40px;
   border: 1px solid $color-white;
   border-radius: 3px;
-  padding: 5px 15px 12px;
+  padding: 10px 10px 12px;
   font-family: $font-roboto-condensed;
   line-height: 17px;
   text-transform: uppercase;

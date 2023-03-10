@@ -1,5 +1,5 @@
-.footer {
-  padding: 50px 0 55px;
+.page-footer {
+  padding: 50px 0 35px;
   background-color: $color-dark-blue;
 
   @include vp-1919 {
@@ -7,7 +7,7 @@
   }
 }
 
-.footer__container {
+.page-footer__container {
   display: flex;
   max-width: 1320px;
   column-gap: 13%;
@@ -15,7 +15,7 @@
   @include vp-1919 {
     padding: 50px;
     padding-right: 45px;
-    padding-bottom: 65px;
+    padding-bottom: 27px;
     flex-direction: column;
   }
 
@@ -25,7 +25,7 @@
   }
 }
 
-.footer__social {
+.page-footer__social {
   width: 215px;
 
   @include vp-1919 {
@@ -36,15 +36,16 @@
 
   @include vp-769 {
     padding-top: 35px;
-    padding-bottom: 23px;
+    padding-bottom: 24px;
     margin: 0;
     border-bottom: 1px solid $color-white-opacity-additional;
   }
 }
 
-.footer__wrapper {
+.page-footer__wrapper {
   display: flex;
-  column-gap: 125px;
+  column-gap: 30px;
+  padding-top: 2px;
 
   @include vp-1919 {
     justify-content: space-between;
@@ -55,10 +56,11 @@
   }
 }
 
-.footer__nav {
+.page-footer__nav {
   max-width: 470px;
 
   @include vp-1919 {
+    padding-top: 0;
     margin-right: 0;
     width: 220px;
   }
@@ -72,26 +74,13 @@
   }
 }
 
-.footer__nav-wrapper {
-  display: flex;
-  column-gap: 50px;
-
-  @include vp-1919 {
-    flex-direction: column;
-    column-gap: 0;
-    row-gap: 5px;
-  }
-
-  @include vp-769 {
-    padding: 0 26px 0 25px;
-  }
-}
-
-.footer__nav-item {
+.page-footer__nav-item {
+  max-width: 220px;
   margin-bottom: 5px;
 
   @include vp-1919 {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
+    max-width: 50%;
   }
 
   @include vp-769 {
@@ -99,14 +88,39 @@
   }
 }
 
-.footer__nav-list,
-.footer__contacts-list {
+.page-footer__nav-list,
+.page-footer__contacts-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.footer__contacts {
+.page-footer__nav-list {
+  width: 470px;
+  column-width: 220px;
+  column-count: 2;
+  column-gap: 30px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 2em;
+  }
+
+  @include vp-1919 {
+    column-count: 1;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 5px;
+  }
+
+  @include vp-769 {
+    padding: 0 26px 0 25px;
+    max-height: max-content;
+  }
+}
+
+.page-footer__contacts {
   max-width: 345px;
 
   @include vp-1919 {
@@ -121,14 +135,14 @@
   }
 }
 
-.footer__contacts-list {
+.page-footer__contacts-list {
   @include vp-769 {
     padding: 0 26px 0 25px;
     max-height: none;
   }
 }
 
-.footer__contacts-item {
+.page-footer__contacts-item {
   margin-bottom: 7px;
 
   &:last-child {
@@ -136,7 +150,7 @@
   }
 }
 
-.footer__button {
+.page-footer__button {
   border: none;
   background-color: inherit;
   padding: 0;
@@ -153,16 +167,17 @@
     letter-spacing: 0.7px;
     font-size: 15px;
     line-height: 16px;
+    margin-bottom: 24px;
   }
 
   @include vp-769 {
     margin-bottom: 0;
     width: 100%;
-    padding: 23px 26px 20px 25px;
+    padding: 23px 26px 19px 25px;
   }
 }
 
-.footer__contacts-item address {
+.page-footer__contacts-item address {
   cursor: pointer;
 
   @include vp-769 {
@@ -170,9 +185,9 @@
   }
 }
 
-.footer__nav-item a,
-.footer__contacts-item a,
-.footer__contacts-item address {
+.page-footer__nav-item a,
+.page-footer__contacts-item a,
+.page-footer__contacts-item address {
   font-family: $font-pt-mono;
   font-style: normal;
   color: $color-white-opacity;
