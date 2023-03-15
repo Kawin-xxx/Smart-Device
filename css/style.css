@@ -1048,6 +1048,7 @@ button,
   padding-left: 300px;
   padding-bottom: 20px;
   background-image: url("../img/about-year.png");
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: 52px 2px;
 }
