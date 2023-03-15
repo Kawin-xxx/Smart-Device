@@ -16,8 +16,8 @@
   padding-left: 300px;
   padding-bottom: 20px;
   background-image: url("../img/about-year.png");
+  background-size: 150px;
   background-repeat: no-repeat;
-  background-size: contain;
 
   @include retina {
     background-image: url("../img/about-year@2x.png");

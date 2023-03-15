@@ -385,7 +385,7 @@ $desktop-width:                           1920px;*/
 
 @font-face {
   font-family: "PT Mono";
-  src: url("../../fonts/pt-mono-regular.woff2") format("woff2"), url("../../fonts/pt-mono-regular.woff") format("woff");
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -393,7 +393,7 @@ $desktop-width:                           1920px;*/
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../../fonts/roboto-condensed-regular.woff") format("woff");
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -401,7 +401,7 @@ $desktop-width:                           1920px;*/
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../../fonts/roboto-condensed-bold.woff") format("woff");
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -653,7 +653,7 @@ button,
   bottom: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(4, 24, 39, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1048,8 +1048,8 @@ button,
   padding-left: 300px;
   padding-bottom: 20px;
   background-image: url("../img/about-year.png");
+  background-size: 150px;
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: 52px 2px;
 }
 
@@ -1442,6 +1442,10 @@ button,
   position: relative;
 }
 
+.form__checkbox input[type=checkbox]:focus-visible ~ .form__checkbox-mark {
+  border: 1px solid #041827;
+}
+
 .form--modal .form__checkbox {
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -1476,7 +1480,12 @@ button,
 }
 
 .form__checkbox input {
-  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0;
+  width: 0;
+  padding: 0;
 }
 
 .form__checkbox input:checked ~ .form__checkbox-mark::before {
@@ -1614,7 +1623,6 @@ button,
 }
 
 .page-footer__nav-list {
-  width: 470px;
   -webkit-column-width: 220px;
   -moz-column-width: 220px;
   column-width: 220px;
@@ -1735,7 +1743,6 @@ button,
   }
 
   .page-header__container {
-    max-width: 650px;
     padding: 0;
   }
 
@@ -2021,6 +2028,7 @@ button,
   }
 
   .page-footer__nav-list {
+    width: 470px;
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;

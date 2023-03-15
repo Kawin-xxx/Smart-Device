@@ -96,7 +96,6 @@
 }
 
 .page-footer__nav-list {
-  width: 470px;
   column-width: 220px;
   column-count: 2;
   column-gap: 30px;
@@ -108,6 +107,7 @@
   }
 
   @include vp-1919 {
+    width: 470px;
     column-count: 1;
     flex-direction: column;
     column-gap: 0;

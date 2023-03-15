@@ -7,7 +7,7 @@ let showMoreInfo = () => {
   buttonOpen.addEventListener('click', () => {
     if (blockHidden.classList.contains('close')) {
       blockHidden.classList.remove('close');
-      buttonOpen.textContent = 'Скрыть';
+      buttonOpen.textContent = 'Свернуть';
       textHidden.classList.remove('visually-hidden');
     } else {
       blockHidden.classList.add('close');

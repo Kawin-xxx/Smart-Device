@@ -253,6 +253,11 @@
   }
 }
 
+
+.form__checkbox input[type="checkbox"]:focus-visible ~ .form__checkbox-mark {
+  border: 1px solid $color-dark-blue;
+}
+
 .form--modal .form__checkbox {
   align-self: flex-start;
   padding-left: 7px;
@@ -284,7 +289,10 @@
 }
 
 .form__checkbox input {
-  display: none;
+  appearance: none;
+  height: 0;
+  width: 0;
+  padding: 0;
 
   &:checked ~ .form__checkbox-mark::before {
     position: absolute;
