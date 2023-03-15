@@ -1049,7 +1049,6 @@ button,
   padding-bottom: 20px;
   background-image: url("../img/about-year.png");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: 52px 2px;
 }
 
@@ -1442,6 +1441,10 @@ button,
   position: relative;
 }
 
+.form__checkbox input[type=checkbox]:focus-visible ~ .form__checkbox-mark {
+  border: 1px solid #041827;
+}
+
 .form--modal .form__checkbox {
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -1476,7 +1479,12 @@ button,
 }
 
 .form__checkbox input {
-  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0;
+  width: 0;
+  padding: 0;
 }
 
 .form__checkbox input:checked ~ .form__checkbox-mark::before {
@@ -1735,7 +1743,6 @@ button,
   }
 
   .page-header__container {
-    max-width: 650px;
     padding: 0;
   }
 
