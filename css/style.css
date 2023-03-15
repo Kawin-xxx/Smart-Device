@@ -653,7 +653,7 @@ button,
   bottom: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(4, 24, 39, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1622,7 +1622,6 @@ button,
 }
 
 .page-footer__nav-list {
-  width: 470px;
   -webkit-column-width: 220px;
   -moz-column-width: 220px;
   column-width: 220px;
@@ -2028,6 +2027,7 @@ button,
   }
 
   .page-footer__nav-list {
+    width: 470px;
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;

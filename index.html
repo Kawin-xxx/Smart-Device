@@ -206,19 +206,19 @@
                 <ul class="form__list">
                   <li class="form__item form__item--name">
                     <label aria-label="Введите имя." data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля" data-required>
-                      <input type="text" id="name" placeholder="Имя" required>
+                      <input type="text" name="name" id="name" placeholder="Имя" required>
                     </label>
                   </li>
 
                   <li class="form__item form__item--phone">
                     <label aria-label="Введите телефон." data-validate-type="phone" data-on-input-validate data-required data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля">
-                      <input type="tel" id="phone" placeholder="Телефон" required>
+                      <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
                     </label>
                   </li>
 
                   <li class="form__item form__item--question">
                     <label aria-label="Введите ваш вопрос.">
-                      <textarea id="question" placeholder="Ваш вопрос"></textarea>
+                      <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
                     </label>
                   </li>
                 </ul>
@@ -226,7 +226,7 @@
                 <div class="form__button-wrapper">
                   <button class="form__button" type="submit">Задать вопрос</button>
                   <label class="form__checkbox" aria-label="Нажмите, если согласны на обработку персональных данных." data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению!">
-                    <input type="checkbox" aria-invalid="true" id="agreement" required checked>
+                    <input type="checkbox" name="agreement" id="agreement" required checked>
                     <span class="form__checkbox-mark"></span>
                     <span class="form__checkbox-remark">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                   </label>
@@ -352,19 +352,19 @@
                 <ul class="form__list">
                   <li class="form__item form__item--name">
                     <label aria-label="Введите имя." data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля" data-required>
-                      <input data-focus type="text" id="name-popup" placeholder="Имя" required>
+                      <input data-focus type="text" name="name-popup" id="name-popup" placeholder="Имя" required>
                     </label>
                   </li>
 
                   <li class="form__item form__item--phone">
                     <label aria-label="Введите телефон." data-validate-type="phone" data-on-input-validate data-required data-message-base="Поле обязательно к заполнению!" data-message-extra="Проверьте корректность заполнения поля">
-                      <input type="tel" id="phone-popup" placeholder="Телефон" required>
+                      <input type="tel" name="phone-popup" id="phone-popup" placeholder="Телефон" required>
                     </label>
                   </li>
 
                   <li class="form__item form__item--question">
                     <label aria-label="Введите ваш вопрос.">
-                      <textarea id="question-popup" placeholder="Ваш вопрос"></textarea>
+                      <textarea name="question-popup" id="question-popup" placeholder="Ваш вопрос"></textarea>
                     </label>
                   </li>
                 </ul>
@@ -372,7 +372,7 @@
                 <div class="form__button-wrapper">
                   <button class="form__button" type="submit">Отправить</button>
                   <label aria-label="Нажмите, если согласны на обработку персональных данных." class="form__checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению!">
-                    <input type="checkbox" required checked tabindex="0">
+                    <input type="checkbox" name="agreement-popup" id="agreement-popup" required checked tabindex="0">
                     <span class="form__checkbox-mark"></span>
                     <span class="form__checkbox-remark">Я согласен на обработку&nbsp; персональных данных</span>
                   </label>
